@@ -30,7 +30,7 @@ export function SectionHeading({ title, subtitle, centered = false, className }:
       </motion.h2>
       {subtitle && (
         <motion.p
-          className="text-gray-600 dark:text-gray-300 text-lg max-w-3xl"
+          className="text-gray-600 dark:text-gray-300 text-lg max-w-3xl mx-auto"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

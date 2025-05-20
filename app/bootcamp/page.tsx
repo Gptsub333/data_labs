@@ -93,7 +93,7 @@ export default function BootcampPage() {
               </div>
             </div>
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
-              <Image src="/h4.jpg" alt="AI Bootcamp" fill className="object-cover" />
+              <Image src="/bootcamp.jpg" alt="AI Bootcamp" fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -578,25 +578,25 @@ const journeySteps = [
     title: "Foundations of AI",
     description:
       "Begin with the fundamentals of artificial intelligence, machine learning concepts, and the AI ecosystem. Build a solid understanding of key principles and terminology.",
-    image: "/placeholder.svg?key=oymij",
+    image: "/h10.svg",
   },
   {
     title: "Technical Skills Development",
     description:
       "Develop practical skills in Python programming, data manipulation, and essential libraries for AI development. Learn to implement basic machine learning algorithms.",
-    image: "/placeholder.svg?key=wme8j",
+    image: "/1.svg",
   },
   {
     title: "Advanced AI Applications",
     description:
       "Explore specialized areas such as computer vision, natural language processing, and reinforcement learning through hands-on projects and case studies.",
-    image: "/placeholder.svg?key=f0ute",
+    image: "/h11.svg",
   },
   {
     title: "Business Implementation",
     description:
       "Learn to identify AI opportunities in business contexts, develop implementation strategies, and measure the impact of AI solutions on organizational goals.",
-    image: "/placeholder.svg?key=ow32z",
+    image: "/2.svg",
   },
 ]
 

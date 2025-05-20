@@ -382,7 +382,7 @@ const industries = [
     title: "Finance",
     description:
       "AI solutions for fraud detection, risk assessment, algorithmic trading, and personalized banking experiences.",
-    image: "/placeholder-ipq6u.png",
+    image: "/Finance.jpg",
   },
   {
     icon: <Stethoscope className="h-5 w-5" />,
@@ -396,47 +396,47 @@ const industries = [
     title: "Retail",
     description:
       "AI-powered inventory management, demand forecasting, personalized recommendations, and customer insights.",
-    image: "/placeholder.svg?height=400&width=600&query=modern retail store with digital displays",
+    image: "/Retail.jpg",
   },
   {
     icon: <Factory className="h-5 w-5" />,
     title: "Manufacturing",
     description:
       "AI solutions for predictive maintenance, quality control, supply chain optimization, and automated production.",
-    image: "/placeholder.svg?height=400&width=600&query=modern automated manufacturing facility",
+    image: "/Manufacturing.jpg",
   },
   {
     icon: <Cpu className="h-5 w-5" />,
     title: "Technology",
     description:
       "AI integration for product innovation, customer service automation, development acceleration, and data analysis.",
-    image: "/placeholder.svg?height=400&width=600&query=technology office with servers and digital displays",
+    image: "/Technology.jpg",
   },
   {
     icon: <GraduationCap className="h-5 w-5" />,
     title: "Education",
     description:
       "AI applications for personalized learning, administrative efficiency, student engagement, and outcome prediction.",
-    image: "/placeholder.svg?height=400&width=600&query=modern classroom with students using digital technology",
+    image: "/Education.jpg",
   },
   {
     icon: <Truck className="h-5 w-5" />,
     title: "Logistics",
     description: "AI-powered route optimization, demand forecasting, warehouse automation, and delivery management.",
-    image: "/placeholder.svg?height=400&width=600&query=modern logistics warehouse with robots and conveyor belts",
+    image: "/Logistics.jpg",
   },
   {
     icon: <Landmark className="h-5 w-5" />,
     title: "Government",
     description:
       "AI solutions for public service delivery, resource allocation, security enhancement, and policy analysis.",
-    image: "/placeholder.svg?height=400&width=600&query=government building with modern architecture",
+    image: "/Government.jpg",
   },
   {
     icon: <Leaf className="h-5 w-5" />,
     title: "Agriculture",
     description:
       "AI applications for crop monitoring, yield prediction, resource optimization, and sustainable farming.",
-    image: "/placeholder.svg?height=400&width=600&query=modern farm with drones and agricultural technology",
+    image: "/Agriculture.jpg",
   },
 ]

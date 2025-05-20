@@ -49,12 +49,12 @@ export default function Navbar() {
       <div className="container-custom flex items-center justify-between h-16 md:h-20">
        <Link href="/" className="flex items-center space-x-2" onClick={() => setIsOpen(false)}>
           {/* SVG logo using Image component */}
-          <div className="h-14 w-auto relative">
+          <div className="h-20 w-auto relative">
             <Image
               src="/logo.svg"
               alt="DataLabs Logo"
-              width={180}
-              height={56}
+              width={225}
+              height={70}
               className="text-primary-600 dark:invert-[.25] dark:brightness-150"
               priority
               unoptimized // This prevents Next.js from trying to optimize the SVG
