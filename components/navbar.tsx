@@ -51,7 +51,7 @@ export default function Navbar() {
           {/* SVG logo using Image component */}
           <div className="h-20 w-auto relative">
             <Image
-              src="/logo.svg"
+              src="/dark.svg"
               alt="DataLabs Logo"
               width={225}
               height={70}
