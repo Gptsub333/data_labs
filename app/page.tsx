@@ -191,7 +191,14 @@ export default function Home() {
 }
 
 // Typewriter Text Component
-function TypewriterText({ text, className, highlightText, highlightClass }) {
+type TypewriterTextProps = {
+  text: string
+  className?: string
+  highlightText?: string
+  highlightClass?: string
+}
+
+function TypewriterText({ text, className, highlightText, highlightClass }: TypewriterTextProps) {
   const [displayText, setDisplayText] = useState("")
   const speed = 30 // milliseconds per character
 
