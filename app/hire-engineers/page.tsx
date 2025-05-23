@@ -12,7 +12,7 @@ export default function HireEngineersPage() {
   const router = useRouter()
 
   return (
-    <div className="pt-20">
+    <div className="pt-25">
       {/* Hero Section */}
       <section className="bg-gray-50 dark:bg-gray-900 py-20 md:py-28">
         <div className="container-custom">
@@ -97,7 +97,7 @@ export default function HireEngineersPage() {
       <section id="engineers-section" className="section-padding">
         <div className="container-custom">
           <SectionHeading
-            title="Meet Our AI Engineers"
+            title="Meet Our Founders"
             subtitle="Exceptional talent ready to tackle your AI challenges"
             centered
           />
@@ -108,12 +108,6 @@ export default function HireEngineersPage() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button className="px-8" onClick={() => router.push("/contact?subject=Engineer%20Inquiry")}>
-              View All Engineers
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -243,14 +237,6 @@ function EngineerCard({
         <h3 className="text-xl font-semibold mb-1">{name}</h3>
         <p className="text-gray-600 dark:text-gray-400 mb-3">{title}</p>
 
-        <div className="flex items-center mb-4">
-          <div className="flex">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className={`h-4 w-4 ${i < rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300"}`} />
-            ))}
-          </div>
-          <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">{rating}.0</span>
-        </div>
 
         <div className="mb-4 flex-grow">
           <h4 className="text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">Specialties:</h4>

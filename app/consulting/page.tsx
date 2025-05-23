@@ -23,9 +23,9 @@ export default function ConsultingPage() {
   const router = useRouter()
 
   return (
-    <div className="pt-20">
+    <div className="pt-24 md:pt-25">
       {/* Hero Section */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-20 md:py-28">
+      <section className="bg-gray-50 dark:bg-gray-900 py-25 md:py-28">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
@@ -53,7 +53,7 @@ export default function ConsultingPage() {
               </div>
             </div>
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
-              <Image src="/ai-strategy-meeting.png" alt="AI Consulting" fill className="object-cover" />
+              <Image src="/con.png" alt="AI Consulting" fill className="object-cover" />
             </div>
           </div>
         </div>

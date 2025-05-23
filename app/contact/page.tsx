@@ -53,46 +53,46 @@ export default function ContactPage() {
     setFormState((prev) => ({ ...prev, [name]: value }))
   }
 
- const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault()
-  setIsSubmitting(true)
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
 
-  try {
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formState),
-    })
-
-    const data = await res.json()
-
-    if (res.ok && data.success) {
-      setIsSubmitted(true)
-      setFormState({
-        name: "",
-        email: "",
-        company: "",
-        phone: "",
-        message: "",
-        subject: "",
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
       })
-      setTimeout(() => {
-        setIsSubmitted(false)
-      }, 5000)
-    } else {
-      alert(data.error || "Failed to send message")
+
+      const data = await res.json()
+
+      if (res.ok && data.success) {
+        setIsSubmitted(true)
+        setFormState({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          message: "",
+          subject: "",
+        })
+        setTimeout(() => {
+          setIsSubmitted(false)
+        }, 5000)
+      } else {
+        alert(data.error || "Failed to send message")
+      }
+    } catch (error) {
+      alert("Failed to send message, please try again later.")
     }
-  } catch (error) {
-    alert("Failed to send message, please try again later.")
+
+    setIsSubmitting(false)
   }
 
-  setIsSubmitting(false)
-}
-
   return (
-    <div className="pt-20">
+    <div className="pt-2">
       {/* Hero Section */}
       <section className="bg-gray-50 dark:bg-gray-900 py-20 md:py-28">
         <div className="container-custom">
@@ -290,27 +290,44 @@ export default function ContactPage() {
                 subtitle="Visit our headquarters in the heart of San Francisco's tech district."
               />
 
-              <AnimatedCard className="p-6 h-[400px] flex flex-col items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
-                <div className="mb-6">
-                  <Globe className="h-16 w-16 text-primary-600 opacity-80" />
-                </div>
-                <div className="text-center">
-                  <h3 className="text-xl font-semibold mb-2">DataLabs Headquarters</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-1">123 AI Boulevard</p>
-                  <p className="text-gray-600 dark:text-gray-300 mb-1">Tech District</p>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">San Francisco, CA 94105</p>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="mt-2"
-                    onClick={() => window.open("https://maps.google.com", "_blank")}
-                  >
-                    <MapPin className="h-4 w-4 mr-2" />
-                    View on Google Maps
-                  </Button>
-                </div>
-              </AnimatedCard>
+              {/* Image Background with Overlay */}
+              <div className="relative h-[400px] rounded-lg overflow-hidden mt-6">
+                {/* Background Image */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: "url('/lo.png')",
+                  }}
+                />
+
+                {/* Overlay for dark/light readability */}
+                <div className="absolute inset-0 bg-white/60 dark:bg-black/40" />
+
+                {/* Foreground Card */}
+               <AnimatedCard className="relative z-10 h-full flex flex-col items-center justify-center p-6 bg-transparent shadow-none hover:shadow-none">
+
+                  <div className="mb-6">
+                    <Globe className="h-16 w-16 text-primary-600 opacity-80" />
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-xl font-semibold mb-2">DataLabs Headquarters</h3>
+                    <p className="text-gray-600 dark:text-gray-300 mb-1">123 AI Boulevard</p>
+                    <p className="text-gray-600 dark:text-gray-300 mb-1">Tech District</p>
+                    <p className="text-gray-600 dark:text-gray-300 mb-4">San Francisco, CA 94105</p>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="mt-2"
+                      onClick={() => window.open("https://maps.google.com", "_blank")}
+                    >
+                      <MapPin className="h-4 w-4 mr-2" />
+                      View on Google Maps
+                    </Button>
+                  </div>
+                </AnimatedCard>
+              </div>
             </div>
+
           </div>
         </div>
       </section>

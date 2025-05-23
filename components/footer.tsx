@@ -5,7 +5,7 @@ import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "luc
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 dark:bg-gray-800 py-12 mt-16">
+    <footer className="bg-gray-100 dark:bg-gray-800 py-12">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
@@ -13,7 +13,7 @@ export default function Footer() {
               {/* SVG logo using Image component */}
               <div className="h-12 w-auto relative">
                 <Image
-                  src="/logo.svg"
+                  src="/dark.svg"
                   alt="DataLabs Logo"
                   width={150}
                   height={48}

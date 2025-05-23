@@ -26,7 +26,7 @@ export default function IndustriesPage() {
   const router = useRouter()
 
   return (
-    <div className="pt-20">
+    <div className="pt-24 md:pt-25 ">
       {/* Hero Section */}
       <section className="bg-gray-50 dark:bg-gray-900 py-20 md:py-28">
         <div className="container-custom">
