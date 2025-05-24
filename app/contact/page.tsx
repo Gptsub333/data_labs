@@ -291,7 +291,8 @@ export default function ContactPage() {
               />
 
               {/* Image Background with Overlay */}
-              <div className="relative h-[400px] rounded-lg overflow-hidden mt-6">
+            <div className="relative h-[400px] rounded-xl overflow-hidden mt-6 border border-gray-200 dark:border-gray-700 shadow-xl backdrop-blur-sm">
+
                 {/* Background Image */}
                 <div
                   className="absolute inset-0 bg-cover bg-center"

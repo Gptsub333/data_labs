@@ -45,7 +45,7 @@ export default function HireEngineersPage() {
               </div>
             </div>
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
-              <Image src="/h2.webp" alt="AI Engineers" fill className="object-cover" />
+              <Image src="/hi.png" alt="AI Engineers" fill className="object-cover" />
             </div>
           </div>
         </div>

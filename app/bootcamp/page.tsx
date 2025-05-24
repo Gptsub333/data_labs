@@ -93,7 +93,7 @@ export default function BootcampPage() {
               </div>
             </div>
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
-              <Image src="/bootcamp.webp" alt="AI Bootcamp" fill className="object-cover" />
+              <Image src="/boot.png" alt="AI Bootcamp" fill className="object-cover" />
             </div>
           </div>
         </div>

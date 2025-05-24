@@ -382,61 +382,61 @@ const industries = [
     title: "Finance",
     description:
       "AI solutions for fraud detection, risk assessment, algorithmic trading, and personalized banking experiences.",
-    image: "/Finance.webp",
+    image: "/fin.png",
   },
   {
     icon: <Stethoscope className="h-5 w-5" />,
     title: "Healthcare",
     description:
       "AI applications for diagnostic assistance, patient monitoring, treatment optimization, and operational efficiency.",
-    image: "/doctor-digital-hospital.webp",
+    image: "/he.png",
   },
   {
     icon: <ShoppingBag className="h-5 w-5" />,
     title: "Retail",
     description:
       "AI-powered inventory management, demand forecasting, personalized recommendations, and customer insights.",
-    image: "/Retail.webp",
+    image: "/Re.png",
   },
   {
     icon: <Factory className="h-5 w-5" />,
     title: "Manufacturing",
     description:
       "AI solutions for predictive maintenance, quality control, supply chain optimization, and automated production.",
-    image: "/Manufacturing.webp",
+    image: "/man.png",
   },
   {
     icon: <Cpu className="h-5 w-5" />,
     title: "Technology",
     description:
       "AI integration for product innovation, customer service automation, development acceleration, and data analysis.",
-    image: "/Technology.webp",
+    image: "/tech.png",
   },
   {
     icon: <GraduationCap className="h-5 w-5" />,
     title: "Education",
     description:
       "AI applications for personalized learning, administrative efficiency, student engagement, and outcome prediction.",
-    image: "/Education.webp",
+    image: "/ed.png",
   },
   {
     icon: <Truck className="h-5 w-5" />,
     title: "Logistics",
     description: "AI-powered route optimization, demand forecasting, warehouse automation, and delivery management.",
-    image: "/Logistics.webp",
+    image: "/log.png",
   },
   {
     icon: <Landmark className="h-5 w-5" />,
     title: "Government",
     description:
       "AI solutions for public service delivery, resource allocation, security enhancement, and policy analysis.",
-    image: "/Government.webp",
+    image: "/gov.png",
   },
   {
     icon: <Leaf className="h-5 w-5" />,
     title: "Agriculture",
     description:
       "AI applications for crop monitoring, yield prediction, resource optimization, and sustainable farming.",
-    image: "/Agriculture.webp",
+    image: "/agro.png",
   },
 ]
