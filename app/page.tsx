@@ -74,13 +74,8 @@ export default function Home() {
             centered
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ServiceCard
-              icon={<Users className="h-10 w-10 text-primary-600" />}
-              title="Hire AI Engineers"
-              description="Access our pool of expert AI engineers to build and implement cutting-edge solutions for your business."
-              link="/hire-engineers"
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+
             <ServiceCard
               icon={<Brain className="h-10 w-10 text-primary-600" />}
               title="AI Bootcamp"

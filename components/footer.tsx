@@ -11,12 +11,12 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center space-x-2 mb-4">
               {/* SVG logo using Image component */}
-              <div className="h-12 w-auto relative">
+              <div className="h-16 w-auto relative">
                 <Image
                   src="/dark.svg"
                   alt="DataLabs Logo"
-                  width={150}
-                  height={48}
+                  width={200}
+                  height={58}
                   className="text-primary-600 dark:invert-[.25] dark:brightness-150"
                 />
               </div>
@@ -36,7 +36,6 @@ export default function Footer() {
           <div>
             <h4 className="font-montserrat font-semibold text-lg mb-4 text-gray-900 dark:text-white">Services</h4>
             <ul className="space-y-2">
-              <FooterLink href="/hire-engineers">Hire AI Engineers</FooterLink>
               <FooterLink href="/bootcamp">AI Bootcamp</FooterLink>
               <FooterLink href="/consulting">AI Consulting</FooterLink>
               <FooterLink href="/industries">Industries</FooterLink>

@@ -110,7 +110,7 @@ export default function ContactPage() {
       {/* Contact Information */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ContactInfoCard
               icon={<Mail className="h-6 w-6 text-primary-600" />}
               title="Email Us"
@@ -124,12 +124,6 @@ export default function ContactPage() {
               link="tel:+15551234567"
             />
             <ContactInfoCard
-              icon={<MapPin className="h-6 w-6 text-primary-600" />}
-              title="Visit Us"
-              details="123 AI Boulevard, Tech District, San Francisco, CA 94105"
-              link="https://maps.google.com"
-            />
-            <ContactInfoCard
               icon={<Clock className="h-6 w-6 text-primary-600" />}
               title="Business Hours"
               details="Monday - Friday: 9AM - 6PM PST"
@@ -139,199 +133,153 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form and Map */}
-      <section className="section-padding bg-gray-50 dark:bg-gray-900">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <SectionHeading
-                title="Send Us a Message"
-                subtitle="Fill out the form below and we'll get back to you as soon as possible."
-              />
+     {/* Contact Form */}
+<section className="section-padding bg-gray-50 dark:bg-gray-900">
+  <div className="container-custom">
+    <div className="max-w-2xl mx-auto">
+      <SectionHeading
+        title="Send Us a Message"
+        subtitle="Fill out the form below and we'll get back to you as soon as possible."
+        centered
+      />
 
-              <AnimatedCard className="p-6">
-                {isSubmitted ? (
-                  <div className="flex flex-col items-center justify-center py-8">
-                    <div className="w-16 h-16 bg-primary-100 dark:bg-gray-800 rounded-full flex items-center justify-center mb-4">
-                      <CheckCircle className="h-8 w-8 text-primary-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
-                    <p className="text-gray-600 dark:text-gray-300 text-center">
-                      Thank you for reaching out. We'll get back to you shortly.
-                    </p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label htmlFor="name" className="text-sm font-medium">
-                          Full Name <span className="text-red-500">*</span>
-                        </label>
-                        <Input
-                          id="name"
-                          name="name"
-                          value={formState.name}
-                          onChange={handleChange}
-                          placeholder="John Doe"
-                          required
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-medium">
-                          Email Address <span className="text-red-500">*</span>
-                        </label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formState.email}
-                          onChange={handleChange}
-                          placeholder="john@example.com"
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label htmlFor="company" className="text-sm font-medium">
-                          Company
-                        </label>
-                        <Input
-                          id="company"
-                          name="company"
-                          value={formState.company}
-                          onChange={handleChange}
-                          placeholder="Your Company"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label htmlFor="phone" className="text-sm font-medium">
-                          Phone Number
-                        </label>
-                        <Input
-                          id="phone"
-                          name="phone"
-                          value={formState.phone}
-                          onChange={handleChange}
-                          placeholder="+1 (555) 123-4567"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="subject" className="text-sm font-medium">
-                        Subject <span className="text-red-500">*</span>
-                      </label>
-                      <Input
-                        id="subject"
-                        name="subject"
-                        value={formState.subject}
-                        onChange={handleChange}
-                        placeholder="How can we help you?"
-                        required
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium">
-                        Message <span className="text-red-500">*</span>
-                      </label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formState.message}
-                        onChange={handleChange}
-                        placeholder="Tell us more about your project or inquiry..."
-                        rows={5}
-                        required
-                      />
-                    </div>
-
-                    <Button type="submit" className="w-full" disabled={isSubmitting}>
-                      {isSubmitting ? (
-                        <span className="flex items-center">
-                          <svg
-                            className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                          >
-                            <circle
-                              className="opacity-25"
-                              cx="12"
-                              cy="12"
-                              r="10"
-                              stroke="currentColor"
-                              strokeWidth="4"
-                            ></circle>
-                            <path
-                              className="opacity-75"
-                              fill="currentColor"
-                              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                            ></path>
-                          </svg>
-                          Sending...
-                        </span>
-                      ) : (
-                        <span className="flex items-center">
-                          Send Message
-                          <Send className="ml-2 h-4 w-4" />
-                        </span>
-                      )}
-                    </Button>
-                  </form>
-                )}
-              </AnimatedCard>
+      <AnimatedCard className="p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+        {isSubmitted ? (
+          <div className="flex flex-col items-center justify-center py-8">
+            <div className="w-16 h-16 bg-primary-100 dark:bg-gray-800 rounded-full flex items-center justify-center mb-4">
+              <CheckCircle className="h-8 w-8 text-primary-600" />
             </div>
-
-            <div>
-              <SectionHeading
-                title="Our Location"
-                subtitle="Visit our headquarters in the heart of San Francisco's tech district."
-              />
-
-              {/* Image Background with Overlay */}
-            <div className="relative h-[400px] rounded-xl overflow-hidden mt-6 border border-gray-200 dark:border-gray-700 shadow-xl backdrop-blur-sm">
-
-                {/* Background Image */}
-                <div
-                  className="absolute inset-0 bg-cover bg-center"
-                  style={{
-                    backgroundImage: "url('/lo.png')",
-                  }}
+            <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
+            <p className="text-gray-600 dark:text-gray-300 text-center">
+              Thank you for reaching out. We'll get back to you shortly.
+            </p>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <label htmlFor="name" className="text-sm font-medium">
+                  Full Name <span className="text-red-500">*</span>
+                </label>
+                <Input
+                  id="name"
+                  name="name"
+                  value={formState.name}
+                  onChange={handleChange}
+                  placeholder="John Doe"
+                  required
                 />
-
-                {/* Overlay for dark/light readability */}
-                <div className="absolute inset-0 bg-white/60 dark:bg-black/40" />
-
-                {/* Foreground Card */}
-               <AnimatedCard className="relative z-10 h-full flex flex-col items-center justify-center p-6 bg-transparent shadow-none hover:shadow-none">
-
-                  <div className="mb-6">
-                    <Globe className="h-16 w-16 text-primary-600 opacity-80" />
-                  </div>
-                  <div className="text-center">
-                    <h3 className="text-xl font-semibold mb-2">DataLabs Headquarters</h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-1">123 AI Boulevard</p>
-                    <p className="text-gray-600 dark:text-gray-300 mb-1">Tech District</p>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4">San Francisco, CA 94105</p>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="mt-2"
-                      onClick={() => window.open("https://maps.google.com", "_blank")}
-                    >
-                      <MapPin className="h-4 w-4 mr-2" />
-                      View on Google Maps
-                    </Button>
-                  </div>
-                </AnimatedCard>
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="email" className="text-sm font-medium">
+                  Email Address <span className="text-red-500">*</span>
+                </label>
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formState.email}
+                  onChange={handleChange}
+                  placeholder="john@example.com"
+                  required
+                />
               </div>
             </div>
 
-          </div>
-        </div>
-      </section>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <label htmlFor="company" className="text-sm font-medium">
+                  Company
+                </label>
+                <Input
+                  id="company"
+                  name="company"
+                  value={formState.company}
+                  onChange={handleChange}
+                  placeholder="Your Company"
+                />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="phone" className="text-sm font-medium">
+                  Phone Number
+                </label>
+                <Input
+                  id="phone"
+                  name="phone"
+                  value={formState.phone}
+                  onChange={handleChange}
+                  placeholder="+1 (555) 123-4567"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="subject" className="text-sm font-medium">
+                Subject <span className="text-red-500">*</span>
+              </label>
+              <Input
+                id="subject"
+                name="subject"
+                value={formState.subject}
+                onChange={handleChange}
+                placeholder="How can we help you?"
+                required
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="message" className="text-sm font-medium">
+                Message <span className="text-red-500">*</span>
+              </label>
+              <Textarea
+                id="message"
+                name="message"
+                value={formState.message}
+                onChange={handleChange}
+                placeholder="Tell us more about your project or inquiry..."
+                rows={5}
+                required
+              />
+            </div>
+
+            <Button type="submit" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? (
+                <span className="flex items-center">
+                  <svg
+                    className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    ></path>
+                  </svg>
+                  Sending...
+                </span>
+              ) : (
+                <span className="flex items-center">
+                  Send Message
+                  <Send className="ml-2 h-4 w-4" />
+                </span>
+              )}
+            </Button>
+          </form>
+        )}
+      </AnimatedCard>
+    </div>
+  </div>
+</section>
 
       {/* FAQ Section */}
       <section className="section-padding">

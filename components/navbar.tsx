@@ -11,7 +11,7 @@ import { motion, AnimatePresence } from "framer-motion"
 
 // Updated navLinks array with "Labs" and coming soon tag info
 const navLinks = [
-  { name: "Hire Engineers", href: "/hire-engineers" },
+  // { name: "Hire Engineers", href: "/hire-engineers" },
   { name: "AI Bootcamp", href: "/bootcamp" },
   { name: "Consulting", href: "/consulting" },
   { name: "Industries", href: "/industries" },
@@ -59,7 +59,7 @@ export default function Navbar() {
             <Image
               src="/V0.svg"
               alt="DataLabs Logo"
-              width={330}
+              width={350}
               height={80}
               className="text-primary-600 dark:invert-[.25] dark:brightness-150 object-contain"
               priority
