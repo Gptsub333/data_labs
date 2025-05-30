@@ -63,12 +63,7 @@ export default function Footer() {
                 <Phone size={18} className="text-primary-600 mt-1 flex-shrink-0" />
                 <span className="text-gray-600 dark:text-gray-300 text-sm">+1 (555) 123-4567</span>
               </li>
-              <li className="flex items-start space-x-3">
-                <MapPin size={18} className="text-primary-600 mt-1 flex-shrink-0" />
-                <span className="text-gray-600 dark:text-gray-300 text-sm">
-                  123 AI Boulevard, Tech District, San Francisco, CA 94105
-                </span>
-              </li>
+             
             </ul>
           </div>
         </div>
