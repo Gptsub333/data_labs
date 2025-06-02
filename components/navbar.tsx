@@ -55,9 +55,9 @@ export default function Navbar() {
           className="flex items-center h-full"
           onClick={() => setIsOpen(false)}
         >
-          <div className="relative w-[100px] md:w-[130px]  flex items-center h-16 md:h-24">
+          <div className="relative w-[100px] md:w-[200px]  flex items-center h-16 md:h-24">
             <Image
-              src="/V0.svg"
+              src="/datalabs.svg"
               alt="DataLabs Logo"
               width={350}
               height={80}

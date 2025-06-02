@@ -11,13 +11,13 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center space-x-2 mb-4">
               {/* SVG logo using Image component */}
-              <div className="h-16 w-auto relative">
+              <div className="h-16 w-auto relative pb-18">
                 <Image
-                  src="/dark.svg"
+                  src="/datalabs.svg"
                   alt="DataLabs Logo"
-                  width={200}
+                  width={150}
                   height={58}
-                  className="text-primary-600 dark:invert-[.25] dark:brightness-150"
+                  className="text-primary-600 dark:invert-[.25] pb-18 dark:brightness-150"
                 />
               </div>
             </Link>
@@ -63,7 +63,6 @@ export default function Footer() {
                 <Phone size={18} className="text-primary-600 mt-1 flex-shrink-0" />
                 <span className="text-gray-600 dark:text-gray-300 text-sm">+1 (555) 123-4567</span>
               </li>
-             
             </ul>
           </div>
         </div>
