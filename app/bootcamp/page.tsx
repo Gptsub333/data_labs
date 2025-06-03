@@ -200,13 +200,13 @@ export default function BootcampPage() {
               quote="The DataLabs AI Bootcamp transformed my career. The hands-on approach and expert instructors helped me implement AI solutions that delivered immediate value to my organization."
               author="James Wilson"
               position="Data Scientist, TechCorp"
-              image="/asian-man-glasses-headshot.png"
+              image="/avm.jpg"
             />
             <TestimonialCard
               quote="As someone with limited technical background, I was amazed at how accessible the bootcamp made AI concepts. Now I can confidently lead AI initiatives in my department."
               author="Elena Rodriguez"
               position="Marketing Director, Global Retail"
-              image="/latina-professional-headshot.png"
+              image="/avf.png"
             />
           </div>
         </div>

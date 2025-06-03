@@ -93,7 +93,7 @@ export default function IndustriesPage() {
             </div>
 
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
-              <Image src="/health-trans.webp" alt="Healthcare AI" fill className="object-cover" />
+              <Image src="/health.jpg" alt="Healthcare AI" fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -113,19 +113,19 @@ export default function IndustriesPage() {
               industry="Finance"
               title="Fraud Detection Revolution"
               description="Implemented an AI-driven fraud detection system for a global bank, reducing false positives by 40% and saving $3.2M annually."
-              image="/financial-data-visualization.png"
+              image="/hack.jpg"
             />
             <CaseStudyCard
               industry="Retail"
               title="Inventory Optimization"
               description="Developed a demand forecasting system for a retail chain, reducing excess inventory by 23% and increasing product availability by 15%."
-              image="/modern-retail-warehouse.png"
+              image="/inven.jpg"
             />
             <CaseStudyCard
               industry="Manufacturing"
               title="Predictive Maintenance"
               description="Created an AI system that predicts equipment failures, reducing downtime by 35% and maintenance costs by 28% for a manufacturing plant."
-              image="/robotic-factory-floor.png"
+              image="/auto.jpg"
             />
           </div>
         </div>

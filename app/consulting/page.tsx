@@ -119,7 +119,7 @@ export default function ConsultingPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[500px] rounded-xl overflow-hidden shadow-xl">
-              <Image src="/ai-consultant-team.png" alt="Our Consulting Team" fill className="object-cover" />
+              <Image src="/d.jpg" alt="Our Consulting Team" fill className="object-cover" />
             </div>
 
             <div>
@@ -151,7 +151,7 @@ export default function ConsultingPage() {
               title="Financial Services Transformation"
               description="Helped a leading bank implement AI-driven fraud detection, reducing false positives by 35% and saving $2.5M annually."
               metrics={["35% reduction in false positives", "$2.5M annual savings", "3-month implementation"]}
-              image="/financial-office-data-screens.png"
+              image="/fincon.png"
             />
             <CaseStudyCard
               title="Healthcare Efficiency Optimization"
@@ -161,7 +161,7 @@ export default function ConsultingPage() {
                 "22% increase in patient satisfaction",
                 "Seamless EMR integration",
               ]}
-              image="/modern-hospital-digital.png"
+              image="/mod.png"
             />
           </div>
         </div>

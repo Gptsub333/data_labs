@@ -151,7 +151,7 @@ export default function Home() {
             </div>
 
             <div className="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden">
-              <Image src="/cho.avif" alt="DataLabs team" fill className="object-cover rounded-xl" />
+              <Image src="/lap.jpg" alt="DataLabs team" fill className="object-cover rounded-xl" />
             </div>
           </div>
         </div>

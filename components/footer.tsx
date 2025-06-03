@@ -7,17 +7,17 @@ export default function Footer() {
   return (
     <footer className="bg-gray-100 dark:bg-gray-800 py-12">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <Link href="/" className="flex items-center space-x-2 mb-4">
+        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="relative -top-12">
+            <Link href="/" className="flex items-center  space-x-2 mb-7">
               {/* SVG logo using Image component */}
-              <div className="h-16 w-auto relative pb-18">
+              <div className="h-16 top-[20] w-auto ">
                 <Image
                   src="/datalabs.svg"
                   alt="DataLabs Logo"
                   width={150}
                   height={58}
-                  className="text-primary-600 dark:invert-[.25] pb-18 dark:brightness-150"
+                  className="text-primary-600 relative dark:invert-[.25] pb-18 dark:brightness-150"
                 />
               </div>
             </Link>
