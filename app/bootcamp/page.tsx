@@ -8,8 +8,8 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { SectionHeading } from "@/components/ui/section-heading"
 import { AnimatedCard } from "@/components/ui/animated-card"
-import { ArrowRight, Brain, Code, Users, BarChart, CheckCircle, Calendar, Laptop, Award } from "lucide-react"
-
+import { ArrowRight, Brain, Code, Users, BarChart, CheckCircle, Calendar, Laptop, Award, Search } from "lucide-react"
+import { Clock, Target, MessageSquare, Database, Bot, Cpu, Eye, Zap, BookOpen } from 'lucide-react'
 export default function BootcampPage() {
    const [formData, setFormData] = useState({
     name: "",
@@ -59,6 +59,168 @@ export default function BootcampPage() {
       setIsSubmitting(false);
     }
   };
+
+  // Add these data arrays at the bottom of your file with the other data
+const learningOutcomes = [
+  "Learn prompt engineering best practices for application development",
+  "Discover new ways to use LLMs, including how to build your own custom chatbot",
+  "Deeply understand generative AI, describing the key steps in a typical LLM-based generative AI lifecycle, from data gathering and model selection, to performance evaluation and deployment",
+  "Gain hands-on practice writing and iterating on prompts yourself using the GenAI models",
+  "Discuss the challenges and opportunities that generative AI creates for businesses after hearing stories from industry researchers and practitioners",
+  "Describe in detail the transformer architecture that powers LLMs, how they're trained, and how fine-tuning enables LLMs to be adapted to a variety of specific use cases",
+  "Apply state-of-the art training, tuning, inference, tools, and deployment methods to maximize the performance of models within the specific constraints of your project"
+]
+
+const courseOutcomes = [
+  "Understand how to apply GenAI to mission critical business operations",
+  "Solve real world business problem immediately", 
+  "Understand how cutting edge GenAI stack changes your existing engineering workflows"
+]
+
+const topicsCovered = [
+  { icon: <Code className="h-6 w-6" />, title: "Python for GenAI" },
+  { icon: <MessageSquare className="h-6 w-6" />, title: "Prompt Engineering" },
+  { icon: <Brain className="h-6 w-6" />, title: "Basics of Neural Network" },
+  { icon: <Target className="h-6 w-6" />, title: "Model Fine-tuning" },
+  { icon: <Database className="h-6 w-6" />, title: "Embeddings" },
+  { icon: <Search className="h-6 w-6" />, title: "Retrieval Augmented Generation" },
+  { icon: <Bot className="h-6 w-6" />, title: "Chatbot/Assistant systems" },
+  { icon: <Cpu className="h-6 w-6" />, title: "MLOps" },
+  { icon: <Eye className="h-6 w-6" />, title: "Vision and Voice GenAI" },
+  { icon: <Zap className="h-6 w-6" />, title: "AI Agents" }
+]
+
+const targetAudience = [
+  {
+    icon: <Code className="h-6 w-6 text-primary-600" />,
+    title: "Software Engineers",
+    description: "Developers looking to integrate AI into their applications"
+  },
+  {
+    icon: <Cpu className="h-6 w-6 text-primary-600" />,
+    title: "IT Employees",
+    description: "IT professionals with understanding of Engineering mathematics"
+  },
+  {
+    icon: <BookOpen className="h-6 w-6 text-primary-600" />,
+    title: "Engineering Students", 
+    description: "Undergraduate and Graduate students in Engineering"
+  }
+]
+
+const weeklyContent = [
+  {
+    week: 1,
+    title: "Basics for GenAI",
+    topics: [
+      "New GenAI stack",
+      "Current and future opportunities in GenAI", 
+      "Python for GenAI",
+      "Basics of Prompt Engineering",
+      "Basics of Neural Network/Linear Algebra/Probability",
+      "Vibe Coding"
+    ]
+  },
+  {
+    week: 2, 
+    title: "Text/Vision AI",
+    topics: [
+      "Embeddings",
+      "Retrieval Augmented Generation (NLP)",
+      "Semantic Search systems using AI",
+      "AI for Computer Vision", 
+      "Multimodal RAG- Chat with Videos"
+    ]
+  },
+  {
+    week: 3,
+    title: "AI Agents and Reasoning", 
+    topics: [
+      "Multi-Agentic Design Patterns",
+      "Function calling",
+      "Browser Use",
+      "Build your own AI agent in 60 minutes",
+      "Reasoning AI models",
+      "Planning in AI models",
+      "Meta Prompting"
+    ]
+  },
+  {
+    week: 4,
+    title: "Fine Tuning and Deployment",
+    topics: [
+      "Why finetune",
+      "Tricks to improve accuracy and performance", 
+      "Finetuning methods for AI models",
+      "AI inference",
+      "HIPAA/SOC2/Fedramp for AI inference"
+    ]
+  },
+  {
+    week: 5,
+    title: "Production AI - LLMOps and AI evaluation",
+    topics: [
+      "AI Orchestration",
+      "Tokens, Latency, Accuracy and Throughput 101",
+      "A/B testing AI models", 
+      "AI Benchmarking",
+      "Evaluation pipelines in production"
+    ]
+  },
+  {
+    week: 6,
+    title: "Vertical AI",
+    topics: [
+      "AI for Medicine and Life Science",
+      "AI for Finance",
+      "AI for Government",
+      "AI for Education", 
+      "AI for Media & Entertainment"
+    ]
+  },
+  {
+    week: 7,
+    title: "Software systems for AI",
+    topics: [
+      "AI frameworks",
+      "Data engineering",
+      "Compute and Storage",
+      "Open Source AI",
+      "Front-end for AI"
+    ]
+  },
+  {
+    week: 8,
+    title: "Future of AI", 
+    topics: [
+      "Agents in 2026",
+      "Reinforcement learning",
+      "AI Snake Oil"
+    ]
+  }
+]
+
+const liveDemos = [
+  { title: "Smart Assistant and Chatbot", category: "Conversational AI" },
+  { title: "Intelligent Document processing", category: "Document AI" },
+  { title: "Meeting summarization", category: "NLP" },
+  { title: "Image and Video Generator", category: "Generative AI" },
+  { title: "Voice powered AI Agents", category: "Voice AI" },
+  { title: "PHI/PII data masking", category: "Privacy AI" },
+  { title: "Demand forecasting", category: "Predictive AI" },
+  { title: "Video processing (Face recognition - Attendance system)", category: "Computer Vision" },
+  { title: "Healthcare Diagnostics", category: "Medical AI" },
+  { title: "Talking to database (NL2SQL)", category: "Database AI" },
+  { title: "Emotion detection", category: "Sentiment AI" },
+  { title: "Virtual try ons", category: "AR/AI" },
+  { title: "Personalized Health Monitoring", category: "Health AI" },
+  { title: "Content Creation for Marketing", category: "Marketing AI" },
+  { title: "Travel Planning Assistants", category: "Travel AI" },
+  { title: "Semantic Search", category: "Search AI" },
+  { title: "Video search and synthesis", category: "Video AI" },
+  { title: "Object Detection", category: "Computer Vision" },
+  { title: "Personalized shopping and recommendation", category: "E-commerce AI" }
+]
 
   return (
     <div className="pt-24 md:pt-25">
@@ -173,22 +335,136 @@ export default function BootcampPage() {
         </div>
       </section>
 
-      {/* Instructors */}
-      <section className="section-padding bg-gray-50 dark:bg-gray-900">
-        <div className="container-custom">
-          <SectionHeading
-            title="Meet Your Instructors"
-            subtitle="Learn from industry experts with extensive experience"
-            centered
-          />
+     {/* New Section  */}
+     <section className="section-padding bg-gray-50 dark:bg-gray-900">
+  <div className="container-custom">
+    <SectionHeading
+      title="Art of Possible with GenAI"
+      subtitle="Master the cutting-edge technologies shaping the future of business"
+      centered
+    />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {instructors.map((instructor, index) => (
-              <InstructorCard key={index} {...instructor} />
-            ))}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
+      <div>
+        <h3 className="text-2xl font-bold mb-6">What You Will Learn</h3>
+        <div className="space-y-4">
+          {learningOutcomes.map((outcome, index) => (
+            <div key={index} className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
+              <p className="text-gray-600 dark:text-gray-300">{outcome}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-bold mb-6">Course Outcomes</h3>
+        <div className="space-y-6">
+          {courseOutcomes.map((outcome, index) => (
+            <div key={index} className="flex gap-4">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-sm">
+                {index + 1}
+              </div>
+              <p className="text-gray-600 dark:text-gray-300">{outcome}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div className="mb-12">
+      <h3 className="text-2xl font-bold mb-8 text-center">Topics Covered</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        {topicsCovered.map((topic, index) => (
+          <AnimatedCard key={index} className="p-4 text-center">
+            <div className="mb-3 flex justify-center text-primary-600">{topic.icon}</div>
+            <h4 className="font-semibold text-sm">{topic.title}</h4>
+          </AnimatedCard>
+        ))}
+      </div>
+    </div>
+
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+      <div>
+        <h3 className="text-2xl font-bold mb-6">Program Details</h3>
+        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <Clock className="h-5 w-5 text-primary-600" />
+              <span className="font-semibold">Timeline:</span>
+              <span className="text-gray-600 dark:text-gray-300">5 hours/week for 8 weeks</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <Target className="h-5 w-5 text-primary-600" />
+              <span className="font-semibold">Format:</span>
+              <span className="text-gray-600 dark:text-gray-300">Interactive lectures & hands-on demos</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <CheckCircle className="h-5 w-5 text-primary-600" />
+              <span className="font-semibold">Projects:</span>
+              <span className="text-gray-600 dark:text-gray-300">19 live demo applications</span>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-bold mb-6">Who Should Join?</h3>
+        <div className="space-y-4">
+          {targetAudience.map((audience, index) => (
+            <div key={index} className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary-100 dark:bg-gray-700 flex items-center justify-center">
+                {audience.icon}
+              </div>
+              <div>
+                <h4 className="font-semibold mb-1">{audience.title}</h4>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">{audience.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div className="mb-12">
+      <h3 className="text-2xl font-bold mb-8 text-center">8-Week Curriculum</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {weeklyContent.map((week, index) => (
+          <AnimatedCard key={index} className="p-6">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold">
+                {week.week}
+              </div>
+              <div className="flex-grow">
+                <h4 className="text-lg font-semibold mb-3">{week.title}</h4>
+                <ul className="space-y-2">
+                  {week.topics.map((topic, topicIndex) => (
+                    <li key={topicIndex} className="flex items-start">
+                      <CheckCircle className="h-4 w-4 text-primary-600 mr-2 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-600 dark:text-gray-300 text-sm">{topic}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </AnimatedCard>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <h3 className="text-2xl font-bold mb-8 text-center">Live Demo Projects</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {liveDemos.map((demo, index) => (
+          <AnimatedCard key={index} className="p-4 hover:shadow-lg transition-shadow">
+            <div className="text-xs text-primary-600 font-semibold mb-2">{demo.category}</div>
+            <h4 className="font-semibold text-sm">{demo.title}</h4>
+          </AnimatedCard>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Testimonials */}
       <section className="section-padding">
