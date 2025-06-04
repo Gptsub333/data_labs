@@ -53,7 +53,7 @@ export default function ConsultingPage() {
               </div>
             </div>
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
-              <Image src="/con.png" alt="AI Consulting" fill className="object-cover" />
+              <Image src="/con-fig.png" alt="AI Consulting" fill className="object-cover" />
             </div>
           </div>
         </div>
