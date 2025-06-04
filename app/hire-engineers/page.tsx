@@ -3,168 +3,225 @@
 import type React from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
+import Head from "next/head"
 import { Button } from "@/components/ui/button"
-import { SectionHeading } from "@/components/ui/section-heading"
 import { AnimatedCard } from "@/components/ui/animated-card"
-import { Check, Star, ArrowRight, MessageSquare, Brain, Code, BarChart } from "lucide-react"
+import { Check, ArrowRight, MessageSquare, Brain, Code, BarChart } from "lucide-react"
 
 export default function HireEngineersPage() {
   const router = useRouter()
 
   return (
-    <div className="pt-25">
-      {/* Hero Section */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-20 md:py-28">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-                Hire Expert <span className="text-primary-600">AI Engineers</span>
-              </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-                Access top AI talent to build, implement, and scale your AI solutions. Our engineers bring specialized
-                expertise across machine learning, deep learning, and data science.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="px-8"
-                  onClick={() => document.getElementById("engineers-section")?.scrollIntoView({ behavior: "smooth" })}
-                >
-                  Hire Now
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="px-8"
-                  onClick={() => document.getElementById("expertise-section")?.scrollIntoView({ behavior: "smooth" })}
-                >
-                  Learn More
-                </Button>
+    <>
+      <Head>
+        <title>Hire Expert AI Engineers | DataLabs - Top AI Talent</title>
+        <meta
+          name="description"
+          content="Access top AI engineering talent to build, implement, and scale your AI solutions. Our engineers bring specialized expertise in machine learning, deep learning, and data science."
+        />
+        <meta
+          name="keywords"
+          content="hire AI engineers, AI talent, machine learning engineers, deep learning experts, data science professionals, AI development team"
+        />
+        <meta property="og:title" content="Hire Expert AI Engineers | DataLabs" />
+        <meta
+          property="og:description"
+          content="Access top AI talent to build, implement, and scale your AI solutions. Our engineers bring specialized expertise across machine learning, deep learning, and data science."
+        />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://yourdomain.com/hire-engineers" />
+      </Head>
+
+      <main className="pt-25">
+        {/* Hero Section */}
+        <section className="bg-gray-50 dark:bg-gray-900 py-20 md:py-28" role="banner">
+          <div className="container-custom">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="animate-fade-in">
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+                  Hire Expert <span className="text-primary-600">AI Engineers</span>
+                </h1>
+                <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+                  Access top AI talent to build, implement, and scale your AI solutions. Our engineers bring specialized
+                  expertise across machine learning, deep learning, and data science.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button
+                    size="lg"
+                    className="px-8"
+                    onClick={() => document.getElementById("engineers-section")?.scrollIntoView({ behavior: "smooth" })}
+                  >
+                    Hire Now
+                    <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="px-8"
+                    onClick={() => document.getElementById("expertise-section")?.scrollIntoView({ behavior: "smooth" })}
+                  >
+                    Learn More
+                  </Button>
+                </div>
+              </div>
+              <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
+                <Image
+                  src="/hi.png"
+                  alt="Team of AI engineers collaborating on machine learning project"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
-            <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
-              <Image src="/hi.png" alt="AI Engineers" fill className="object-cover" />
+          </div>
+        </section>
+
+        {/* Expertise Section */}
+        <section id="expertise-section" className="section-padding" role="region" aria-labelledby="expertise-heading">
+          <div className="container-custom">
+            <header className="text-center mb-12">
+              <h2 id="expertise-heading" className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+                Our AI Engineering Expertise
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Specialized talent across the AI spectrum
+              </p>
+            </header>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {expertiseAreas.map((area, index) => (
+                <ExpertiseCard key={index} {...area} />
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Expertise Section */}
-      <section id="expertise-section" className="section-padding">
-        <div className="container-custom">
-          <SectionHeading
-            title="Our AI Engineering Expertise"
-            subtitle="Specialized talent across the AI spectrum"
-            centered
-          />
+        {/* How It Works Section */}
+        <section
+          className="section-padding bg-gray-50 dark:bg-gray-900"
+          role="region"
+          aria-labelledby="process-heading"
+        >
+          <div className="container-custom">
+            <header className="text-center mb-12">
+              <h2 id="process-heading" className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+                How It Works
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Simple process to get the AI talent you need
+              </p>
+            </header>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {expertiseAreas.map((area, index) => (
-              <ExpertiseCard key={index} {...area} />
-            ))}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <ProcessStep
+                number="01"
+                title="Consultation"
+                description="We discuss your project requirements, timeline, and the specific AI expertise you need."
+              />
+              <ProcessStep
+                number="02"
+                title="Talent Matching"
+                description="We match you with AI engineers who have the right skills and experience for your project."
+              />
+              <ProcessStep
+                number="03"
+                title="Seamless Integration"
+                description="Our engineers integrate with your team and start delivering results from day one."
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* How It Works Section */}
-      <section className="section-padding bg-gray-50 dark:bg-gray-900">
-        <div className="container-custom">
-          <SectionHeading title="How It Works" subtitle="Simple process to get the AI talent you need" centered />
+        {/* Featured Engineers */}
+        <section id="engineers-section" className="section-padding" role="region" aria-labelledby="engineers-heading">
+          <div className="container-custom">
+            <header className="text-center mb-12">
+              <h2 id="engineers-heading" className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+                Meet Our Founders
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Exceptional talent ready to tackle your AI challenges
+              </p>
+            </header>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <ProcessStep
-              number="01"
-              title="Consultation"
-              description="We discuss your project requirements, timeline, and the specific AI expertise you need."
-            />
-            <ProcessStep
-              number="02"
-              title="Talent Matching"
-              description="We match you with AI engineers who have the right skills and experience for your project."
-            />
-            <ProcessStep
-              number="03"
-              title="Seamless Integration"
-              description="Our engineers integrate with your team and start delivering results from day one."
-            />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {engineers.map((engineer, index) => (
+                <EngineerCard key={index} {...engineer} />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Featured Engineers */}
-      <section id="engineers-section" className="section-padding">
-        <div className="container-custom">
-          <SectionHeading
-            title="Meet Our Founders"
-            subtitle="Exceptional talent ready to tackle your AI challenges"
-            centered
-          />
+        {/* Testimonials */}
+        <section
+          className="section-padding bg-gray-50 dark:bg-gray-900"
+          role="region"
+          aria-labelledby="testimonials-heading"
+        >
+          <div className="container-custom">
+            <header className="text-center mb-12">
+              <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+                What Our Clients Say
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Success stories from businesses that hired our AI engineers
+              </p>
+            </header>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {engineers.map((engineer, index) => (
-              <EngineerCard key={index} {...engineer} />
-            ))}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <TestimonialCard
+                quote="The AI engineers from DataLabs transformed our data analytics capabilities. They built a custom ML solution that increased our prediction accuracy by 35%."
+                author="Sarah Johnson"
+                position="CTO, TechVision Inc."
+                image="/professional-woman-dark-hair.png"
+              />
+              <TestimonialCard
+                quote="Working with DataLabs' AI team was seamless. They quickly understood our requirements and delivered a sophisticated NLP system that exceeded our expectations."
+                author="Michael Chen"
+                position="Head of Innovation, Global Finance"
+                image="/asian-man-glasses-headshot.png"
+              />
+            </div>
           </div>
+        </section>
 
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="section-padding bg-gray-50 dark:bg-gray-900">
-        <div className="container-custom">
-          <SectionHeading
-            title="What Our Clients Say"
-            subtitle="Success stories from businesses that hired our AI engineers"
-            centered
-          />
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <TestimonialCard
-              quote="The AI engineers from DataLabs transformed our data analytics capabilities. They built a custom ML solution that increased our prediction accuracy by 35%."
-              author="Sarah Johnson"
-              position="CTO, TechVision Inc."
-              image="/professional-woman-dark-hair.png"
-            />
-            <TestimonialCard
-              quote="Working with DataLabs' AI team was seamless. They quickly understood our requirements and delivered a sophisticated NLP system that exceeded our expectations."
-              author="Michael Chen"
-              position="Head of Innovation, Global Finance"
-              image="/asian-man-glasses-headshot.png"
-            />
+        {/* CTA Section */}
+        <section
+          id="contact-section"
+          className="section-padding bg-primary-600 text-white"
+          role="region"
+          aria-labelledby="cta-heading"
+        >
+          <div className="container-custom text-center">
+            <h2 id="cta-heading" className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">
+              Ready to Build Your AI Solution?
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+              Get in touch to discuss how our AI engineers can help bring your vision to life.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="px-8"
+                onClick={() => router.push("/contact?subject=Hire%20Engineers")}
+              >
+                Hire Engineers
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="px-8 bg-transparent text-white hover:bg-white hover:text-primary-600"
+                onClick={() => router.push("/contact?subject=Schedule%20Call")}
+              >
+                Schedule a Call
+              </Button>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section id="contact-section" className="section-padding bg-primary-600 text-white">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">Ready to Build Your AI Solution?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Get in touch to discuss how our AI engineers can help bring your vision to life.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button
-              size="lg"
-              variant="secondary"
-              className="px-8"
-              onClick={() => router.push("/contact?subject=Hire%20Engineers")}
-            >
-              Hire Engineers
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="px-8 bg-transparent text-white hover:bg-white hover:text-primary-600"
-              onClick={() => router.push("/contact?subject=Schedule%20Call")}
-            >
-              Schedule a Call
-            </Button>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </main>
+    </>
   )
 }
 
@@ -179,12 +236,14 @@ function ExpertiseCard({
 }) {
   return (
     <AnimatedCard className="p-6 h-full flex flex-col">
-      <div className="mb-4 text-primary-600">{icon}</div>
+      <div className="mb-4 text-primary-600" aria-hidden="true">
+        {icon}
+      </div>
       <h3 className="text-xl font-semibold mb-4">{title}</h3>
-      <ul className="space-y-2 mt-auto">
+      <ul className="space-y-2 mt-auto" aria-label={`${title} expertise areas`}>
         {skills.map((skill, index) => (
           <li key={index} className="flex items-start">
-            <Check className="h-5 w-5 text-primary-600 mr-2 flex-shrink-0 mt-0.5" />
+            <Check className="h-5 w-5 text-primary-600 mr-2 flex-shrink-0 mt-0.5" aria-hidden="true" />
             <span className="text-gray-600 dark:text-gray-300">{skill}</span>
           </li>
         ))}
@@ -204,7 +263,10 @@ function ProcessStep({
 }) {
   return (
     <AnimatedCard className="p-6 text-center h-full flex flex-col">
-      <div className="w-12 h-12 rounded-full bg-primary-100 dark:bg-gray-800 flex items-center justify-center text-primary-600 font-bold text-xl mx-auto mb-4">
+      <div
+        className="w-12 h-12 rounded-full bg-primary-100 dark:bg-gray-800 flex items-center justify-center text-primary-600 font-bold text-xl mx-auto mb-4"
+        aria-hidden="true"
+      >
         {number}
       </div>
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
@@ -231,12 +293,11 @@ function EngineerCard({
   return (
     <AnimatedCard className="overflow-hidden h-full flex flex-col">
       <div className="relative h-64 w-full">
-        <Image src={image || "/placeholder.svg"} alt={name} fill className="object-cover" />
+        <Image src={image || "/placeholder.svg"} alt={`${name}, ${title} at DataLabs`} fill className="object-cover" />
       </div>
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-semibold mb-1">{name}</h3>
         <p className="text-gray-600 dark:text-gray-400 mb-3">{title}</p>
-
 
         <div className="mb-4 flex-grow">
           <h4 className="text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">Specialties:</h4>
@@ -256,9 +317,10 @@ function EngineerCard({
           variant="outline"
           size="sm"
           className="w-full mt-auto"
-          onClick={() => router.push(`/contact?subject=Engineer%20Inquiry&engineer=${name}`)}
+          onClick={() => router.push(`/contact?subject=Engineer%20Inquiry&engineer=${encodeURIComponent(name)}`)}
+          aria-label={`Contact ${name}`}
         >
-          <MessageSquare className="h-4 w-4 mr-2" />
+          <MessageSquare className="h-4 w-4 mr-2" aria-hidden="true" />
           Contact
         </Button>
       </div>
@@ -279,7 +341,7 @@ function TestimonialCard({
 }) {
   return (
     <AnimatedCard className="p-8 h-full flex flex-col">
-      <div className="mb-6 text-primary-600">
+      <div className="mb-6 text-primary-600" aria-hidden="true">
         <svg
           width="45"
           height="36"
@@ -294,16 +356,18 @@ function TestimonialCard({
           />
         </svg>
       </div>
-      <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 flex-grow">{quote}</p>
-      <div className="flex items-center">
+      <blockquote className="text-lg text-gray-700 dark:text-gray-300 mb-6 flex-grow">
+        <p>{quote}</p>
+      </blockquote>
+      <footer className="flex items-center">
         <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-          <Image src={image || "/placeholder.svg"} alt={author} fill className="object-cover" />
+          <Image src={image || "/placeholder.svg"} alt={`${author}, ${position}`} fill className="object-cover" />
         </div>
         <div>
-          <h4 className="font-semibold">{author}</h4>
+          <cite className="font-semibold not-italic">{author}</cite>
           <p className="text-sm text-gray-600 dark:text-gray-400">{position}</p>
         </div>
-      </div>
+      </footer>
     </AnimatedCard>
   )
 }

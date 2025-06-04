@@ -3,8 +3,8 @@
 import type React from "react"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
+import Head from "next/head"
 import { Button } from "@/components/ui/button"
-import { SectionHeading } from "@/components/ui/section-heading"
 import { AnimatedCard } from "@/components/ui/animated-card"
 import {
   ArrowRight,
@@ -26,183 +26,237 @@ export default function IndustriesPage() {
   const router = useRouter()
 
   return (
-    <div className="pt-24 md:pt-25 ">
-      {/* Hero Section */}
-      <section className="bg-gray-50 dark:bg-gray-900 py-20 md:py-28">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-              AI Solutions Across <span className="text-primary-600">Industries</span>
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              DataLabs delivers tailored AI solutions to address the unique challenges and opportunities in diverse
-              industries.
-            </p>
-            <Button
-              size="lg"
-              className="px-8"
-              onClick={() => document.getElementById("industries-grid")?.scrollIntoView({ behavior: "smooth" })}
-            >
-              Explore Solutions
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
-        </div>
-      </section>
+    <>
+      <Head>
+        <title>AI Solutions Across Industries | DataLabs - Industry-Specific AI</title>
+        <meta
+          name="description"
+          content="Discover how DataLabs delivers tailored AI solutions across finance, healthcare, retail, manufacturing and more industries to address unique business challenges."
+        />
+        <meta
+          name="keywords"
+          content="AI solutions, industry-specific AI, healthcare AI, finance AI, retail AI, manufacturing AI, artificial intelligence applications"
+        />
+        <meta property="og:title" content="AI Solutions Across Industries | DataLabs" />
+        <meta
+          property="og:description"
+          content="DataLabs delivers tailored AI solutions to address the unique challenges and opportunities in diverse industries."
+        />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://yourdomain.com/industries" />
+      </Head>
 
-      {/* Industries Grid */}
-      <section id="industries-grid" className="section-padding">
-        <div className="container-custom">
-          <SectionHeading
-            title="Industries We Serve"
-            subtitle="Transforming businesses across sectors with AI innovation"
-            centered
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (
-              <IndustryCard key={index} {...industry} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Industry: Healthcare */}
-      <section id="featured-industry" className="section-padding bg-gray-50 dark:bg-gray-900">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="text-primary-600 font-semibold mb-2 block">Featured Industry</span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">Healthcare Transformation</h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
-                AI is revolutionizing healthcare by improving diagnostics, optimizing operations, and enhancing patient
-                care. DataLabs partners with healthcare providers to implement AI solutions that drive better outcomes.
+      <main className="pt-24 md:pt-25">
+        {/* Hero Section */}
+        <section className="bg-gray-50 dark:bg-gray-900 py-20 md:py-28" role="banner">
+          <div className="container-custom">
+            <div className="max-w-3xl mx-auto text-center animate-fade-in">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+                AI Solutions Across <span className="text-primary-600">Industries</span>
+              </h1>
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+                DataLabs delivers tailored AI solutions to address the unique challenges and opportunities in diverse
+                industries.
               </p>
-
-              <div className="space-y-4 mb-8">
-                <FeatureItem text="AI-powered diagnostic assistance with 95% accuracy" />
-                <FeatureItem text="Predictive analytics for patient readmission reduction" />
-                <FeatureItem text="Operational efficiency improvements through workflow optimization" />
-                <FeatureItem text="Enhanced patient experience through personalized care" />
-              </div>
-
-              <Button className="px-6" onClick={() => router.push("/contact?subject=Healthcare%20AI%20Solutions")}>
-                Explore Healthcare Solutions
-                <ArrowRight className="ml-2 h-4 w-4" />
+              <Button
+                size="lg"
+                className="px-8"
+                onClick={() => document.getElementById("industries-grid")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                Explore Solutions
+                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </Button>
             </div>
+          </div>
+        </section>
 
-            <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
-              <Image src="/health.jpg" alt="Healthcare AI" fill className="object-cover" />
+        {/* Industries Grid */}
+        <section id="industries-grid" className="section-padding" role="region" aria-labelledby="industries-heading">
+          <div className="container-custom">
+            <header className="text-center mb-12">
+              <h2 id="industries-heading" className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+                Industries We Serve
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Transforming businesses across sectors with AI innovation
+              </p>
+            </header>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {industries.map((industry, index) => (
+                <IndustryCard key={index} {...industry} />
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Case Studies */}
-      <section id="case-studies" className="section-padding">
-        <div className="container-custom">
-          <SectionHeading
-            title="Success Stories"
-            subtitle="Real-world impact of our industry-specific AI solutions"
-            centered
-          />
+        {/* Featured Industry: Healthcare */}
+        <section
+          id="featured-industry"
+          className="section-padding bg-gray-50 dark:bg-gray-900"
+          role="region"
+          aria-labelledby="featured-heading"
+        >
+          <div className="container-custom">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <span className="text-primary-600 font-semibold mb-2 block">Featured Industry</span>
+                <h2 id="featured-heading" className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">
+                  Healthcare Transformation
+                </h2>
+                <p className="text-gray-600 dark:text-gray-300 mb-6">
+                  AI is revolutionizing healthcare by improving diagnostics, optimizing operations, and enhancing
+                  patient care. DataLabs partners with healthcare providers to implement AI solutions that drive better
+                  outcomes.
+                </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <CaseStudyCard
-              industry="Finance"
-              title="Fraud Detection Revolution"
-              description="Implemented an AI-driven fraud detection system for a global bank, reducing false positives by 40% and saving $3.2M annually."
-              image="/hack.jpg"
-            />
-            <CaseStudyCard
-              industry="Retail"
-              title="Inventory Optimization"
-              description="Developed a demand forecasting system for a retail chain, reducing excess inventory by 23% and increasing product availability by 15%."
-              image="/inven.jpg"
-            />
-            <CaseStudyCard
-              industry="Manufacturing"
-              title="Predictive Maintenance"
-              description="Created an AI system that predicts equipment failures, reducing downtime by 35% and maintenance costs by 28% for a manufacturing plant."
-              image="/auto.jpg"
-            />
+                <div className="space-y-4 mb-8">
+                  <FeatureItem text="AI-powered diagnostic assistance with 95% accuracy" />
+                  <FeatureItem text="Predictive analytics for patient readmission reduction" />
+                  <FeatureItem text="Operational efficiency improvements through workflow optimization" />
+                  <FeatureItem text="Enhanced patient experience through personalized care" />
+                </div>
+
+                <Button
+                  className="px-6"
+                  onClick={() => router.push("/contact?subject=Healthcare%20AI%20Solutions")}
+                  aria-label="Learn more about healthcare AI solutions"
+                >
+                  Explore Healthcare Solutions
+                  <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                </Button>
+              </div>
+
+              <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
+                <Image
+                  src="/health.jpg"
+                  alt="Healthcare professionals using AI diagnostic tools in a modern medical facility"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Cross-Industry Benefits */}
-      <section id="benefits" className="section-padding bg-gray-50 dark:bg-gray-900">
-        <div className="container-custom">
-          <SectionHeading
-            title="Cross-Industry Benefits"
-            subtitle="Common advantages of AI implementation across sectors"
-            centered
-          />
+        {/* Case Studies */}
+        <section id="case-studies" className="section-padding" role="region" aria-labelledby="case-studies-heading">
+          <div className="container-custom">
+            <header className="text-center mb-12">
+              <h2 id="case-studies-heading" className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+                Success Stories
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Real-world impact of our industry-specific AI solutions
+              </p>
+            </header>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <BenefitCard
-              icon={<TrendingUp className="h-10 w-10 text-primary-600" />}
-              title="Operational Efficiency"
-              description="Streamline processes, reduce manual tasks, and optimize resource allocation through AI-driven automation and intelligence."
-            />
-            <BenefitCard
-              icon={<LineChart className="h-10 w-10 text-primary-600" />}
-              title="Data-Driven Insights"
-              description="Transform raw data into actionable intelligence with advanced analytics and machine learning algorithms."
-            />
-            <BenefitCard
-              icon={<Users className="h-10 w-10 text-primary-600" />}
-              title="Enhanced Customer Experience"
-              description="Deliver personalized, responsive service through AI-powered recommendation systems and intelligent assistants."
-            />
-            <BenefitCard
-              icon={<Shield className="h-10 w-10 text-primary-600" />}
-              title="Risk Mitigation"
-              description="Identify and address potential risks before they impact your business with predictive analytics and anomaly detection."
-            />
-            <BenefitCard
-              icon={<Zap className="h-10 w-10 text-primary-600" />}
-              title="Innovation Acceleration"
-              description="Rapidly develop and deploy new products and services with AI-enhanced R&D and prototyping capabilities."
-            />
-            <BenefitCard
-              icon={<Target className="h-10 w-10 text-primary-600" />}
-              title="Strategic Decision-Making"
-              description="Make better business decisions with AI-powered forecasting, scenario analysis, and optimization tools."
-            />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <CaseStudyCard
+                industry="Finance"
+                title="Fraud Detection Revolution"
+                description="Implemented an AI-driven fraud detection system for a global bank, reducing false positives by 40% and saving $3.2M annually."
+                image="/hack.jpg"
+              />
+              <CaseStudyCard
+                industry="Retail"
+                title="Inventory Optimization"
+                description="Developed a demand forecasting system for a retail chain, reducing excess inventory by 23% and increasing product availability by 15%."
+                image="/inven.jpg"
+              />
+              <CaseStudyCard
+                industry="Manufacturing"
+                title="Predictive Maintenance"
+                description="Created an AI system that predicts equipment failures, reducing downtime by 35% and maintenance costs by 28% for a manufacturing plant."
+                image="/auto.jpg"
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-primary-600 text-white">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">Ready to Transform Your Industry?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Contact us to discuss how our AI solutions can address your industry-specific challenges.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button
-              size="lg"
-              variant="secondary"
-              className="px-8"
-              onClick={() => router.push("/contact?subject=Industry%20Solutions")}
-            >
-              Contact Us
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="px-8 bg-transparent text-white hover:bg-white hover:text-primary-600"
-              onClick={() => router.push("/contact?subject=Demo%20Request")}
-            >
-              Schedule a Demo
-            </Button>
+        {/* Cross-Industry Benefits */}
+        <section
+          id="benefits"
+          className="section-padding bg-gray-50 dark:bg-gray-900"
+          role="region"
+          aria-labelledby="benefits-heading"
+        >
+          <div className="container-custom">
+            <header className="text-center mb-12">
+              <h2 id="benefits-heading" className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+                Cross-Industry Benefits
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Common advantages of AI implementation across sectors
+              </p>
+            </header>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <BenefitCard
+                icon={<TrendingUp className="h-10 w-10 text-primary-600" />}
+                title="Operational Efficiency"
+                description="Streamline processes, reduce manual tasks, and optimize resource allocation through AI-driven automation and intelligence."
+              />
+              <BenefitCard
+                icon={<LineChart className="h-10 w-10 text-primary-600" />}
+                title="Data-Driven Insights"
+                description="Transform raw data into actionable intelligence with advanced analytics and machine learning algorithms."
+              />
+              <BenefitCard
+                icon={<Users className="h-10 w-10 text-primary-600" />}
+                title="Enhanced Customer Experience"
+                description="Deliver personalized, responsive service through AI-powered recommendation systems and intelligent assistants."
+              />
+              <BenefitCard
+                icon={<Shield className="h-10 w-10 text-primary-600" />}
+                title="Risk Mitigation"
+                description="Identify and address potential risks before they impact your business with predictive analytics and anomaly detection."
+              />
+              <BenefitCard
+                icon={<Zap className="h-10 w-10 text-primary-600" />}
+                title="Innovation Acceleration"
+                description="Rapidly develop and deploy new products and services with AI-enhanced R&D and prototyping capabilities."
+              />
+              <BenefitCard
+                icon={<Target className="h-10 w-10 text-primary-600" />}
+                title="Strategic Decision-Making"
+                description="Make better business decisions with AI-powered forecasting, scenario analysis, and optimization tools."
+              />
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="section-padding bg-primary-600 text-white" role="region" aria-labelledby="cta-heading">
+          <div className="container-custom text-center">
+            <h2 id="cta-heading" className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">
+              Ready to Transform Your Industry?
+            </h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+              Contact us to discuss how our AI solutions can address your industry-specific challenges.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="px-8"
+                onClick={() => router.push("/contact?subject=Industry%20Solutions")}
+              >
+                Contact Us
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="px-8 bg-transparent text-white hover:bg-white hover:text-primary-600"
+                onClick={() => router.push("/contact?subject=Demo%20Request")}
+              >
+                Schedule a Demo
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
   )
 }
 
@@ -220,11 +274,16 @@ function IndustryCard({
   return (
     <AnimatedCard className="overflow-hidden h-full flex flex-col">
       <div className="relative h-48 w-full">
-        <Image src={image || "/placeholder.svg"} alt={title} fill className="object-cover" />
+        <Image
+          src={image || "/placeholder.svg"}
+          alt={`${title} industry AI solutions - ${description.substring(0, 50)}...`}
+          fill
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
           <div className="p-6 text-white">
             <div className="flex items-center gap-2 mb-1">
-              {icon}
+              <span aria-hidden="true">{icon}</span>
               <h3 className="text-xl font-semibold">{title}</h3>
             </div>
           </div>
@@ -240,7 +299,7 @@ function IndustryCard({
 function FeatureItem({ text }: { text: string }) {
   return (
     <div className="flex items-start">
-      <CheckCircle className="h-5 w-5 text-primary-600 mr-3 flex-shrink-0 mt-0.5" />
+      <CheckCircle className="h-5 w-5 text-primary-600 mr-3 flex-shrink-0 mt-0.5" aria-hidden="true" />
       <span className="text-gray-600 dark:text-gray-300">{text}</span>
     </div>
   )
@@ -262,7 +321,12 @@ function CaseStudyCard({
   return (
     <AnimatedCard className="overflow-hidden h-full flex flex-col">
       <div className="relative h-48 w-full">
-        <Image src={image || "/placeholder.svg"} alt={title} fill className="object-cover" />
+        <Image
+          src={image || "/placeholder.svg"}
+          alt={`${industry} case study: ${title}`}
+          fill
+          className="object-cover"
+        />
       </div>
       <div className="p-6 flex flex-col flex-grow">
         <span className="text-sm font-medium text-primary-600 mb-2">{industry}</span>
@@ -284,7 +348,9 @@ function BenefitCard({
 }) {
   return (
     <AnimatedCard className="p-6 h-full flex flex-col">
-      <div className="mb-4">{icon}</div>
+      <div className="mb-4" aria-hidden="true">
+        {icon}
+      </div>
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
       <p className="text-gray-600 dark:text-gray-300">{description}</p>
     </AnimatedCard>
@@ -305,7 +371,10 @@ function TrendingUp(props: any) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden="true"
+      role="img"
     >
+      <title>Trending Up Icon</title>
       <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
       <polyline points="16 7 22 7 22 13"></polyline>
     </svg>
@@ -325,7 +394,10 @@ function LineChart(props: any) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden="true"
+      role="img"
     >
+      <title>Line Chart Icon</title>
       <path d="M3 3v18h18"></path>
       <path d="m19 9-5 5-4-4-3 3"></path>
     </svg>
@@ -345,7 +417,10 @@ function Users(props: any) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden="true"
+      role="img"
     >
+      <title>Users Icon</title>
       <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
       <circle cx="9" cy="7" r="4"></circle>
       <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -367,7 +442,10 @@ function Target(props: any) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden="true"
+      role="img"
     >
+      <title>Target Icon</title>
       <circle cx="12" cy="12" r="10"></circle>
       <circle cx="12" cy="12" r="6"></circle>
       <circle cx="12" cy="12" r="2"></circle>
