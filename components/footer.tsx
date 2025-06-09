@@ -61,16 +61,40 @@ export default function Footer() {
               </li>
               <li className="flex items-start space-x-3">
                 <Phone size={18} className="text-primary-600 mt-1 flex-shrink-0" />
-                <span className="text-gray-600 dark:text-gray-300 text-sm">+1 (555) 123-4567</span>
+                <span className="text-gray-600 dark:text-gray-300 text-sm">+1 609-745-6789</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-200 dark:border-gray-700 mt-12 pt-8 text-center">
-          <p className="text-gray-500 dark:text-gray-400 text-sm">
-            © {new Date().getFullYear()} DataLabs. All rights reserved.
-          </p>
+        <div className="border-t border-gray-200 dark:border-gray-700 mt-12 pt-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
+            <p className="text-gray-500 dark:text-gray-400 text-sm">
+              © {new Date().getFullYear()} DataLabs. All rights reserved.
+            </p>
+            <div className="flex items-center space-x-1 text-sm">
+              <Link
+                href="/privacy"
+                className="text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-500 transition-colors"
+              >
+                Privacy
+              </Link>
+              <span className="text-gray-400">|</span>
+              <Link
+                href="/terms-of-use"
+                className="text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-500 transition-colors"
+              >
+                Terms of Use
+              </Link>
+              <span className="text-gray-400">|</span>
+              <Link
+                href="/swyft-advance"
+                className="text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-500 transition-colors"
+              >
+                Swyft Advance Privacy Act
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
