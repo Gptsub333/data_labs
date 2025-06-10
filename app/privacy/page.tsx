@@ -20,7 +20,7 @@ export default function PrivacyPolicyPage() {
       {/* Content Section */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 leading-relaxed text-justify text-base sm:text-lg">
         <p>
-          This Privacy Policy discloses the privacy practices for <u><a className="text-purple-600 underline" href="https://www.datalabscorp.com/">www.datalabscorp.com</a></u> and applies solely to information collected through this website (Site). The terms “we”, “us”, or “our” in this Site refers to Nexi LLC and its affiliates or subsidiaries that reference or link to this Policy, including but not limited to, Nexi LLC.
+          This Privacy Policy discloses the privacy practices for <u><a className="text-purple-600 underline" href="https://www.datalabscorp.com/">www.datalabscorp.com</a></u> and applies solely to information collected through this website (Site). The terms “we”, “us”, or “our” in this Site refers to v0DataLabs and its affiliates or subsidiaries that reference or link to this Policy, including but not limited to, v0DataLabs
         </p>
         <p>
           We reserve the right to change this Privacy Policy from time to time. The Privacy Policy is subject to and incorporates by reference our Terms of Use, including its limitation on liability.
@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
 
         <h2 className="text-2xl font-semibold mt-6">What We Do With the Personal Information Collected</h2>
         <p>
-          We will use the information you provide to us to evaluate your business’s eligibility for products provided through Nexi, respond to your inquiries, and to provide you with information relating to our company or services that we believe you may find of interest. We may also use that information to market products or services to you by calls or text messages to mobile, cellular or similar devices and by using an automated telephone dialing system and/or artificial voices or prerecorded messages, even if you incur charges for receiving such communications and by any other applicable medium such as mail, email and facsimile.*
+          We will use the information you provide to us to evaluate your business’s eligibility for products provided through v0DataLabs, respond to your inquiries, and to provide you with information relating to our company or services that we believe you may find of interest. We may also use that information to market products or services to you by calls or text messages to mobile, cellular or similar devices and by using an automated telephone dialing system and/or artificial voices or prerecorded messages, even if you incur charges for receiving such communications and by any other applicable medium such as mail, email and facsimile.*
         </p>
         <p>We may disclose Personal Information to third parties for the following purposes:</p>
         <ul className="list-disc ml-6 space-y-2">
@@ -86,7 +86,7 @@ export default function PrivacyPolicyPage() {
 
         <h2 className="text-2xl font-semibold mt-6">Security</h2>
         <p>
-          Nexi takes reasonable steps to safeguard your Personal Information through physical, electronic, and operational policies and practices. Data can only be read or written through defined service access points, the use of which is password-protected. The physical security of the data is achieved through a combination of network firewalls (there is no direct communication allowed between the database server and the Internet) and servers with operating systems, all housed in a secure facility.
+          v0DataLabs takes reasonable steps to safeguard your Personal Information through physical, electronic, and operational policies and practices. Data can only be read or written through defined service access points, the use of which is password-protected. The physical security of the data is achieved through a combination of network firewalls (there is no direct communication allowed between the database server and the Internet) and servers with operating systems, all housed in a secure facility.
         </p>
         <p>
             Access to the system is controlled. Employees are granted access to Personal Information on a need-to-know basis in order to perform a specific job (for example, billing or customer service).  We use encryption to protect your Personal Information transmitted online, as well as offline. When we contact you about your account or to confirm a funds transfer, we only reference the last four digits of your social security number. The computers/servers in which we store personally identifiable information are kept in a secure environment.
@@ -137,7 +137,7 @@ export default function PrivacyPolicyPage() {
             You can also install and regularly update antivirus and firewall software to protect your computer or device from external attacks by malicious users.  If you use a computer that can be accessed in a public area (e.g., library, coffee shop, etc.), we recommend that you take special precautions to protect the security of your account and Personal Information. When you are finished visiting our Site, you should log out completely, close the browser window and clear the browser’s cache files.
         <br/>
         <br/>
-            You should also be aware of fraudulent attempts to gain access to your account information known as “phishing.” Phishing is a tactic used by scammers to lure people to a phony website through the use of a genuine-looking email purporting to be from a legitimate company. Either in the email itself or on this fake website site, scammers will ask for login information to gain access to people’s accounts and withdraw their money. Nexi will never ask you for your login information in the context of any email. In general, you can protect yourself against phishing by never providing login or Personal Information via an email. You should always ensure the Nexi URL that you are provided begins with: <a className="text-purple-600 underline" href="https://www.datalabscorp.com/">https://www.datalabscorp.com/</a>
+            You should also be aware of fraudulent attempts to gain access to your account information known as “phishing.” Phishing is a tactic used by scammers to lure people to a phony website through the use of a genuine-looking email purporting to be from a legitimate company. Either in the email itself or on this fake website site, scammers will ask for login information to gain access to people’s accounts and withdraw their money. v0DataLabs will never ask you for your login information in the context of any email. In general, you can protect yourself against phishing by never providing login or Personal Information via an email. You should always ensure the v0DataLabs URL that you are provided begins with: <a className="text-purple-600 underline" href="https://www.datalabscorp.com/">https://www.datalabscorp.com/</a>
         </p>
 
         <h2 className="text-2xl font-semibold mt-6">Your California Privacy Rights</h2>

@@ -93,15 +93,15 @@ export default function SwyftAdvance() {
             </strong>
         </p>
         <p>
-            This Privacy Notice for California Residents is provided as part of our compliance with the requirements of the California Consumer Privacy Act of 2018 (the “CCPA”) and supplements the information contained in the Nexi Privacy Policy.  It applies solely to individual residents of the State of California.
+            This Privacy Notice for California Residents is provided as part of our compliance with the requirements of the California Consumer Privacy Act of 2018 (the “CCPA”) and supplements the information contained in the v0DataLabs Privacy Policy.  It applies solely to individual residents of the State of California.
         </p>
         <p>
-            Certain exemptions apply to your rights and Nexi’s obligations under the CCPA. These rights and requirements may not apply in certain situations depending on your relationship with Nexi, Nexi’s other legal obligations, and as otherwise provided for in the CCPA.
+            Certain exemptions apply to your rights and v0DataLabs’s obligations under the CCPA. These rights and requirements may not apply in certain situations depending on your relationship with v0DataLabs, v0DataLabs’s other legal obligations, and as otherwise provided for in the CCPA.
         </p>
 
         <h2 className="text-2xl font-semibold mt-6">Legal Entities</h2>
         <p>
-        Nexi LLC doing business as “Nexi” or “Nexi California” and its subsidiaries and affiliates (collectively “us”, “we” and/or “Nexi”).
+        v0DataLabs doing business as “v0DataLabs” and its subsidiaries and affiliates (collectively “us”, “we” and/or “v0DataLabs”).
         </p>
 
         <h2 className="text-2xl font-semibold mt-6">Applicability</h2>
@@ -201,7 +201,7 @@ export default function SwyftAdvance() {
         <ul className="list-disc ml-6 space-y-2">
             <li>Our Affiliates and Subsidiaries</li>
             <li>Vendors and Service Providers who provide services such as website hosting, data analysis, payment processing, information technology and related infrastructure, customer service, email delivery, auditing, marketing and marketing research activities</li>
-            <li>Partners and Third Parties who provide services such as payment, banking and communication infrastructure, storage, legal expertise, tax expertise, notaries and auditors, who promote Nexi and its financial services and products to customers and other prospective customers</li>
+            <li>Partners and Third Parties who provide services such as payment, banking and communication infrastructure, storage, legal expertise, tax expertise, notaries and auditors, who promote v0DataLabs and its financial services and products to customers and other prospective customers</li>
             <li>Other Third Parties who enable customers to conduct transactions online and via mobile devices (at the direction of the customer)</li>
             <li>Government Agencies as required by laws and regulations</li>
         </ul>
