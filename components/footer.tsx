@@ -88,10 +88,10 @@ export default function Footer() {
               </Link>
               <span className="text-gray-400">|</span>
               <Link
-                href="/swyft-advance"
+                href="/advance-privacy-act"
                 className="text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-500 transition-colors"
               >
-                Swyft Advance Privacy Act
+                Advance Privacy Act
               </Link>
             </div>
           </div>

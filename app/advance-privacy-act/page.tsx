@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "DataLabs Privacy Policy - Learn how we collect, use, and protect your personal information.",
 }
 
-export default function SwyftAdvance() {
+export default function AdvancePrivacyAct() {
     const dataCategories = [
     {
       category: "A. Identifiers",
@@ -80,7 +80,7 @@ export default function SwyftAdvance() {
       <div className="bg-gradient-to-r from-purple-600 to-purple-800 py-12 sm:py-16 mt-20 sm:mt-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center">
-            California Consumer Privacy Act
+            Advance Privacy Act
           </h1>
         </div>
       </div>
@@ -89,7 +89,7 @@ export default function SwyftAdvance() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 leading-relaxed text-justify text-base sm:text-lg">
         <p>
             <strong>
-                Swyft Advance Privacy Act of 2018. Effective January 1, 2020.
+                Advance Privacy Act of 2018. Effective January 1, 2020.
             </strong>
         </p>
         <p>

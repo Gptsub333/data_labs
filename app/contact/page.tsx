@@ -120,7 +120,7 @@ export default function ContactPage() {
             <ContactInfoCard
               icon={<Phone className="h-6 w-6 text-primary-600" />}
               title="Call Us"
-              details="+1 (555) 123-4567"
+              details="+1 609-745-6789"
               link="tel:+15551234567"
             />
             <ContactInfoCard
